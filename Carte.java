@@ -6,14 +6,19 @@ public class Carte {
 
     private Couleur couleur ;
 
-    public Carte(int valeur, Couleur couleur) {
-        this.valeur = valeur;
-        this.couleur = couleur;
+    public Carte(Uno u){
+
+    }
+
+    public Carte(Uno u,Couleur c) {
+        this.uno = u;
+        this.couleur = c;
     }
 
     public int getValeur() {
         return valeur;
     }
+    
 
     public void setValeur(int valeur) {
         this.valeur = valeur;
