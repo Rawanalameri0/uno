@@ -1,4 +1,4 @@
-package cartes;
+package uno.cartes;
 
 public enum Couleur{
 
@@ -31,7 +31,5 @@ public enum Couleur{
     public String toString(){
         return this.nom;
     }
-
-
 
 }

@@ -1,4 +1,4 @@
-package cartes;
+package uno;
 
 public class Uno {
 

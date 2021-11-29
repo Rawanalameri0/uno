@@ -1,5 +1,5 @@
-package cartes;
-import cartes.Carte;
+package uno.cartes;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -11,15 +11,15 @@ public class PaquetDeCartes{
 
 
     /**
-     * Constructeur de paquet de cartes
+     * Constructeur de paquet de uno.cartes
      */
     public PaquetDeCartes()
     {
         this.deck = new ArrayList<Carte>();
     }
     /**
-     * Ajouter des cartes au paquet
-     * @param cartes tableau de cartes
+     * Ajouter des uno.cartes au paquet
+     * @param cartes tableau de uno.cartes
      */
     public void ajouter(Carte... cartes)
     {
@@ -30,7 +30,7 @@ public class PaquetDeCartes{
     }
 
     /**
-     * @return le nombres de cartes dans le paquet
+     * @return le nombres de uno.cartes dans le paquet
      */
     public int getNombreDeCartes()
     {
@@ -46,7 +46,7 @@ public class PaquetDeCartes{
     }
 
     /**
-     * @return la somme des cartes du paquet
+     * @return la somme des uno.cartes du paquet
      */
     public int getValeur()
     {
@@ -62,7 +62,7 @@ public class PaquetDeCartes{
 
 
     /**
-     * @return l'affichage du paquet de cartes
+     * @return l'affichage du paquet de uno.cartes
      */
     public String toString()
     {
@@ -70,8 +70,8 @@ public class PaquetDeCartes{
     }
 
     /**
-     * Rajouter un paquet de cartes au paquet existant
-     * @param pdc paquet de cartes
+     * Rajouter un paquet de uno.cartes au paquet existant
+     * @param pdc paquet de uno.cartes
      */
     public void ajouter(PaquetDeCartes pdc)
     {
@@ -84,7 +84,7 @@ public class PaquetDeCartes{
 
 
     /**
-     * Mélanger les cartes du paquet
+     * Mélanger les uno.cartes du paquet
      */
     public void melanger()
     {
@@ -93,7 +93,7 @@ public class PaquetDeCartes{
     }
 
     /**
-     * inverser l'ordre des cartes du paquet
+     * inverser l'ordre des uno.cartes du paquet
      */
     public void retourner()
     {
