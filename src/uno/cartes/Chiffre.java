@@ -37,49 +37,21 @@ public class Chiffre extends Carte {
     }
 
     public boolean peutEtrePoseeSur(Plus2 c) {
-        if (c.getCouleur().equals(this.couleur)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.estDeCouleurCompatibleAvec(c);
     }
     public boolean peutEtrePoseeSur(Plus4 c){
-        if (c.getCouleur().equals(this.couleur)) {
-            return true;
-        }
-        return false;
+        return this.estDeCouleurCompatibleAvec(c);
     }
 
     public boolean peutEtrePoseeSur(Jocker c) {
-        if (c.getCouleur().equals(this.couleur) || !c.getCouleur().equals(this.couleur))
-        {
-            return true;
-        }
-        if(c.getValeur()==this.getValeur() || c.getValeur()!=this.getValeur())
-        {
-            return true;
-        }
-
-        return false;
+        return this.estDeCouleurCompatibleAvec(c);
     }
     public boolean peutEtrePoseeSur(ChangementDeSens c) {
-        if (c.getCouleur().equals(this.couleur) || !c.getCouleur().equals(this.couleur))
-        {
-            return true;
-        }
-        if(c.getValeur()==this.getValeur() || c.getValeur()!=this.getValeur())
-        {
-            return true;
-        }
-        return false;
+        return this.estDeCouleurCompatibleAvec(c);
     }
 
     public boolean peutEtrePoseeSur(PasseTonTour c) {
-        if (c.getCouleur().equals(this.couleur)) {
-            return true;
-        }
-        return false;
+        return this.estDeCouleurCompatibleAvec(c);
     }
 
 

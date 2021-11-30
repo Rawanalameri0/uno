@@ -42,6 +42,12 @@ public abstract class Carte {
 
     public boolean estDeCouleurCompatibleAvec(Carte c)
     {
-        return false;
+        if (c.getCouleur()==this.couleur)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
