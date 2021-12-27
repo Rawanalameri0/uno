@@ -22,7 +22,6 @@ public class Plus4 extends Carte {
 
     public boolean peutEtrePoseeSur(Chiffre c) {
         return true;
-
     }
 
 

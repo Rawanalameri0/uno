@@ -37,10 +37,15 @@ class Plus4Test {
     @Test
     void peutEtreRecouvertePar() {
         assertEquals(true, plus4_1.peutEtreRecouvertePar(c));
+        assertEquals(false, plus4_2.peutEtreRecouvertePar(c));
+        assertEquals(true, plus4_1.peutEtreRecouvertePar(cds));
         assertEquals(false, plus4_2.peutEtreRecouvertePar(cds));
         assertEquals(true, plus4_3.peutEtreRecouvertePar(ptt));
+        assertEquals(false, plus4_2.peutEtreRecouvertePar(ptt));
         assertEquals(false, plus4_1.peutEtreRecouvertePar(p2));
-        assertEquals(true, plus4_3.peutEtreRecouvertePar(plus4_3));
+        assertEquals(true, plus4_3.peutEtreRecouvertePar(p2));
+        assertEquals(true, plus4_2.peutEtreRecouvertePar(plus4_3));
+        assertEquals(true, plus4_1.peutEtreRecouvertePar(j));
     }
 
     @Test
@@ -52,33 +57,32 @@ class Plus4Test {
     @Test
     void testPeutEtrePoseeSur() {
         assertEquals(true,plus4_1.peutEtrePoseeSur(c));
-        assertEquals(false,plus4_2.peutEtrePoseeSur(c));
+        assertEquals(true,plus4_2.peutEtrePoseeSur(c));
     }
 
     @Test
     void testPeutEtrePoseeSur1() {
         assertEquals(true,plus4_3.peutEtrePoseeSur(ptt));
-        assertEquals(false,plus4_2.peutEtrePoseeSur(ptt));
+        assertEquals(true,plus4_2.peutEtrePoseeSur(ptt));
     }
 
     @Test
     void testPeutEtrePoseeSur2() {
         assertEquals(true,plus4_3.peutEtrePoseeSur(p2));
-        assertEquals(false,plus4_1.peutEtrePoseeSur(p2));
+        assertEquals(true,plus4_1.peutEtrePoseeSur(p2));
     }
 
     @Test
     void testPeutEtrePoseeSur3() {
         assertEquals(true,plus4_1.peutEtrePoseeSur(cds));
-        assertEquals(false,plus4_3.peutEtrePoseeSur(cds));
+        assertEquals(true,plus4_3.peutEtrePoseeSur(cds));
     }
 
     @Test
     void testPeutEtrePoseeSur4() {
         assertEquals(true,plus4_1.peutEtrePoseeSur(j));
         assertEquals(true,plus4_2.peutEtrePoseeSur(j));
-        assertEquals(true,plus4_3.peutEtrePoseeSur(j));
-        assertEquals(true,plus4_4.peutEtrePoseeSur(j));
+
 
     }
 }

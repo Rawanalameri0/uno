@@ -37,7 +37,17 @@ class Plus2Test {
     @Test
     void peutEtreRecouvertePar() {
         assertEquals(true, plus2_4.peutEtreRecouvertePar(j));
-        assertEquals(false, plus2_1.peutEtreRecouvertePar(j));
+        assertEquals(true, plus2_1.peutEtreRecouvertePar(j));
+        assertEquals(true, plus2_1.peutEtreRecouvertePar(cds));
+        assertEquals(false, plus2_3.peutEtreRecouvertePar(cds));
+        assertEquals(true, plus2_1.peutEtreRecouvertePar(c));
+        assertEquals(false, plus2_3.peutEtreRecouvertePar(c));
+        assertEquals(true, plus2_4.peutEtreRecouvertePar(ptt));
+        assertEquals(false, plus2_2.peutEtreRecouvertePar(ptt));
+        assertEquals(true, plus2_1.peutEtreRecouvertePar(plus2_1));
+        assertEquals(true, plus2_1.peutEtreRecouvertePar(plus2_3));
+        assertEquals(true, plus2_1.peutEtreRecouvertePar(plus2_4));
+        assertEquals(true, plus2_4.peutEtreRecouvertePar(plus2_4));
     }
 
     @Test
@@ -61,7 +71,7 @@ class Plus2Test {
     @Test
     void testPeutEtrePoseeSur2() {
         assertEquals(true, plus2_1.peutEtrePoseeSur(plus2_1));
-        assertEquals(false, plus2_2.peutEtrePoseeSur(plus2_1));
+        assertEquals(true, plus2_2.peutEtrePoseeSur(plus2_1));
     }
 
     @Test

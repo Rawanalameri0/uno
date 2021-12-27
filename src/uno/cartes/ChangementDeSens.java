@@ -46,7 +46,7 @@ public class ChangementDeSens extends Carte {
 
 
     public boolean peutEtrePoseeSur(ChangementDeSens c) {
-        return this.estDeCouleurCompatibleAvec(c);
+        return true;
     }
 
 

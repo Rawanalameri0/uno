@@ -2,10 +2,11 @@ package uno.cartes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.function.Consumer;
 
 
-
-public class PaquetDeCartes{
+public class PaquetDeCartes implements Iterable<Carte>{
 
     private ArrayList<Carte> deck;
 
@@ -118,6 +119,13 @@ public class PaquetDeCartes{
     }
 
 
+    @Override
+    public Iterator<Carte> iterator() {
+        return new PaquetDeCartes_Iterable(deck);
+
+    }
+
+    
 
 
 }

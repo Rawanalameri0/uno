@@ -1,6 +1,5 @@
 package uno.tests;
-import  org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import  org.junit.jupiter.api.*;
 import uno.Uno;
 import uno.cartes.*;
 
@@ -17,7 +16,7 @@ class ChangementDeSensTest {
 
 
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
         uno = new Uno();
         cds1= new ChangementDeSens(uno,Couleur.BLEU);
@@ -31,57 +30,62 @@ class ChangementDeSensTest {
         ptt=new PasseTonTour(uno,Couleur.VERT);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getValeur() {
        assertEquals(20,cds1.getValeur());
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void peutEtreRecouvertePar() {
         assertEquals(true, cds4.peutEtreRecouvertePar(j));
-        assertEquals(false, cds1.peutEtreRecouvertePar(j));
+        assertEquals(true, cds1.peutEtreRecouvertePar(p4));
+        assertEquals(false, cds3.peutEtreRecouvertePar(c));
+        assertEquals(true, cds2.peutEtreRecouvertePar(p2));
+        assertEquals(false, cds3.peutEtreRecouvertePar(ptt));
+        assertEquals(true, cds2.peutEtreRecouvertePar(cds2));
+        assertEquals(true, cds2.peutEtreRecouvertePar(cds1));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void peutEtrePoseeSur() {
 
         assertEquals(true,cds1.peutEtrePoseeSur(cds1));
-        assertEquals(false,cds2.peutEtrePoseeSur(cds1));
+        assertEquals(true,cds2.peutEtrePoseeSur(cds1));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testPeutEtrePoseeSur() {
 
         assertEquals(true,cds4.peutEtrePoseeSur(p4));
         assertEquals(false,cds1.peutEtrePoseeSur(p4));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testPeutEtrePoseeSur1() {
 
         assertEquals(true,cds4.peutEtrePoseeSur(ptt));
-       // assertEquals(false,cds1.peutEtrePoseeSur(ptt));
+         assertEquals(false,cds1.peutEtrePoseeSur(ptt));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testPeutEtrePoseeSur2() {
 
         assertEquals(true,cds1.peutEtrePoseeSur(c));
-       // assertEquals(false,cds3.peutEtrePoseeSur(c));
+        assertEquals(false,cds3.peutEtrePoseeSur(c));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testPeutEtrePoseeSur3() {
 
         assertEquals(true,cds2.peutEtrePoseeSur(p2));
-        //assertEquals(false,cds1.peutEtrePoseeSur(p2));
+        assertEquals(false,cds1.peutEtrePoseeSur(p2));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testPeutEtrePoseeSur4() {
 
         assertEquals(true,cds4.peutEtrePoseeSur(j));
-      //  assertEquals(false,cds1.peutEtrePoseeSur(j));
+        assertEquals(false,cds1.peutEtrePoseeSur(j));
     }
 }

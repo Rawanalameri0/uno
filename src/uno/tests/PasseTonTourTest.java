@@ -37,14 +37,21 @@ class PasseTonTourTest {
     @Test
     void peutEtreRecouvertePar() {
         assertEquals(true, ptt_1.peutEtreRecouvertePar(j));
-        assertEquals(false, ptt_2.peutEtreRecouvertePar(j));
+        assertEquals(true, ptt_2.peutEtreRecouvertePar(j));
+        assertEquals(true, ptt_3.peutEtreRecouvertePar(p2));
+        assertEquals(false, ptt_1.peutEtreRecouvertePar(p2));
+        assertEquals(true, ptt_2.peutEtreRecouvertePar(p4));
+        assertEquals(true, ptt_3.peutEtreRecouvertePar(p4));
+        assertEquals(true, ptt_2.peutEtreRecouvertePar(cds));
+        assertEquals(false, ptt_3.peutEtreRecouvertePar(cds));
+        assertEquals(true, ptt_3.peutEtreRecouvertePar(ptt_2));
 
     }
 
     @Test
     void peutEtrePoseeSur() {
         assertEquals(true,ptt_1.peutEtrePoseeSur(ptt_1));
-        assertEquals(false,ptt_1.peutEtrePoseeSur(ptt_2));
+        assertEquals(true,ptt_1.peutEtrePoseeSur(ptt_2));
     }
 
     @Test
@@ -55,7 +62,7 @@ class PasseTonTourTest {
 
     @Test
     void testPeutEtrePoseeSur1() {
-        assertEquals(true,ptt_2.peutEtrePoseeSur(p2));
+        assertEquals(true,ptt_3.peutEtrePoseeSur(p2));
         assertEquals(false,ptt_1.peutEtrePoseeSur(p2));
     }
 

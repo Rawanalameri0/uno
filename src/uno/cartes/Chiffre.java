@@ -10,14 +10,6 @@ public class Chiffre extends Carte {
         this.val = val;
     }
 
-
-
-    public void appliquerEffet() {
-
-
-    }
-
-
     public int getValeur() {
         return val;
     }

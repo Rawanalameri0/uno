@@ -37,7 +37,20 @@ class ChiffreTest {
     @Test
     void peutEtreRecouvertePar() {
         assertEquals(true, c4.peutEtreRecouvertePar(j));
-        assertEquals(false, c1.peutEtreRecouvertePar(j));
+        assertEquals(true, c1.peutEtreRecouvertePar(j));
+        assertEquals(true, c1.peutEtreRecouvertePar(p4));
+        assertEquals(true, c3.peutEtreRecouvertePar(p4));
+        assertEquals(true, c2.peutEtreRecouvertePar(p2));
+        assertEquals(false, c3.peutEtreRecouvertePar(p2));
+        assertEquals(true, c4.peutEtreRecouvertePar(ptt));
+        assertEquals(false, c1.peutEtreRecouvertePar(ptt));
+        assertEquals(true, c3.peutEtreRecouvertePar(p4));
+        assertEquals(true, c3.peutEtreRecouvertePar(p4));
+        assertEquals(true, c1.peutEtreRecouvertePar(cds));
+        assertEquals(false, c3.peutEtreRecouvertePar(cds));
+        assertEquals(true, c1.peutEtreRecouvertePar(c1));
+        assertEquals(true, c2.peutEtreRecouvertePar(c3));
+
     }
 
     @Test

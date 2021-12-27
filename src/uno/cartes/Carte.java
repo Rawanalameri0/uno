@@ -21,7 +21,6 @@ public abstract class Carte {
     public abstract boolean peutEtrePoseeSur(ChangementDeSens c);
 
 
-
     public Couleur getCouleur() {
         return couleur;
     }
@@ -29,20 +28,20 @@ public abstract class Carte {
         this.couleur = couleur;
     }
 
-    public String toString() {
-        return "Carte{" +
-                ", couleur=" + couleur +
-                '}';
-    }
 
     public boolean estSansCouleur() {
-        return false;
+        if (this.couleur==null){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 
     public boolean estDeCouleurCompatibleAvec(Carte c)
     {
-        if (c.getCouleur()==this.couleur)
+        if (c.getCouleur().equals(this.couleur))
         {
             return true;
         }

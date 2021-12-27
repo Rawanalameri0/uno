@@ -25,7 +25,7 @@ public class Plus2 extends Carte {
     }
 
     public boolean peutEtrePoseeSur(Plus2 c) {
-        return this.estDeCouleurCompatibleAvec(c);
+        return true;
     }
 
 
