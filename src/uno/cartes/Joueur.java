@@ -8,28 +8,22 @@ public abstract class Joueur {
     protected String nom;
     protected int numero;
 
-    Joueur(String nom,Uno uno,int numero){
+    public Joueur(String nom,Uno uno,int numero){
         this.uno= uno;
         this.numero= numero;
-
+        this.nom=nom;
+        this.main=new PaquetDeCartes();
     }
 
     public abstract void jouer(String coup);
 
     public void recoitCarte(Carte c)
     {
-        for(Carte i: main)
-        {
-            this.main.ajouter(i);
-        }
+        this.main.ajouter(c);
     }
 
     public PaquetDeCartes getmain() {
         return main;
-    }
-
-    public void setmain(PaquetDeCartes deck) {
-        this.main=deck;
     }
 }
 

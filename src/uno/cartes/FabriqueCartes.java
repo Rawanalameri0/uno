@@ -24,10 +24,9 @@ public class FabriqueCartes{
 
     }
 
-    public static PaquetDeCartes getPaquet_UNO(Uno uno) {
-    }
 
-    public void Paquets_UNO()
+
+    public PaquetDeCartes Paquet_UNO()
     {
         Uno uno = new Uno();
         PaquetDeCartes pdc = new PaquetDeCartes();
@@ -67,20 +66,15 @@ public class FabriqueCartes{
             pdc.ajouter(new Plus4(uno,null));
             pdc.ajouter(new Jocker(uno,null));
         }
-    }
-
-
-    public static PaquetDeCartes getPaquetVide()
-    {
-        PaquetDeCartes pdc = new PaquetDeCartes();
         return pdc;
     }
 
 
-
-
-
-
+    public  PaquetDeCartes getPaquetVide()
+    {
+        PaquetDeCartes pdc = new PaquetDeCartes();
+        return pdc;
+    }
 
 
 

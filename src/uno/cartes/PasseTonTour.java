@@ -15,6 +15,12 @@ public class PasseTonTour extends Carte {
         return 20;
     }
 
+    @Override
+    public void appliquereffet() {
+        uno.effet_pass_ton_tour();
+
+    }
+
 
     public boolean peutEtreRecouvertePar(Carte c) {
         return c.peutEtrePoseeSur(this);

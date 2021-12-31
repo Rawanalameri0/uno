@@ -14,10 +14,10 @@ public class Bot extends Joueur {
             if(uno.top_talon().peutEtreRecouvertePar(carte)){
                 uno.add_carte_talon(carte);
                 main.remove(carte);
-               // appliquereffet()
-
+                carte.appliquereffet();
             }
             else{
+
 
             }
             
