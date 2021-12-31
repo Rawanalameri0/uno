@@ -57,6 +57,4 @@ public class Plus4 extends Carte {
 
 
 
-
-
 }

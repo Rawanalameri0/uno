@@ -25,12 +25,7 @@ public class Chiffre extends Carte {
 
 
     public boolean peutEtrePoseeSur(Chiffre c) {
-        if (c.getCouleur().equals(this.couleur) || c.getValeur() == this.getValeur()) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return c.getCouleur().equals(this.couleur) || c.getValeur() == this.getValeur();
     }
 
     public boolean peutEtrePoseeSur(Plus2 c) {
@@ -46,6 +41,8 @@ public class Chiffre extends Carte {
     public boolean peutEtrePoseeSur(ChangementDeSens c) {
         return this.estDeCouleurCompatibleAvec(c);
     }
+
+
 
     public boolean peutEtrePoseeSur(PasseTonTour c) {
         return this.estDeCouleurCompatibleAvec(c);

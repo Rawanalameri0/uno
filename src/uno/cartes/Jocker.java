@@ -15,6 +15,11 @@ public class Jocker extends Carte {
         return 50;
     }
 
+    @Override
+    public void appliquereffet() {
+
+    }
+
 
     public boolean peutEtreRecouvertePar(Carte c) {
         return c.peutEtrePoseeSur(this);
@@ -49,5 +54,7 @@ public class Jocker extends Carte {
     public boolean peutEtrePoseeSur(ChangementDeSens c) {
         return true;
     }
+
+
 
 }

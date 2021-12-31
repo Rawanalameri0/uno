@@ -18,6 +18,8 @@ public class DialogueLigneDeCommande {
     }
 
     public void regair(){
+        uno.top_talon();
+
 
     }
 

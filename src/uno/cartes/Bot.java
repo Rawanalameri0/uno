@@ -17,16 +17,10 @@ public class Bot extends Joueur {
                 carte.appliquereffet();
             }
             else{
-
-
+                main.ajouter(uno.pioche_c());
             }
-            
         }
-
-
-
     }
-
 
 
 }

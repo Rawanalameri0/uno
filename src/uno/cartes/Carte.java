@@ -31,23 +31,15 @@ public abstract class Carte {
 
 
     public boolean estSansCouleur() {
-        if (this.couleur==null){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.couleur == null;
     }
 
 
     public boolean estDeCouleurCompatibleAvec(Carte c)
     {
-        if (c.getCouleur().equals(this.couleur))
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
+        return c.getCouleur().equals(this.couleur);
     }
+
+
+
 }
