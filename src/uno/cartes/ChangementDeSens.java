@@ -49,6 +49,11 @@ public class ChangementDeSens extends Carte {
         return true;
     }
 
+    public void appliquereffet(){
+
+
+    }
+
 
 
 

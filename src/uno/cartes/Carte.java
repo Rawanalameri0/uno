@@ -12,6 +12,7 @@ public abstract class Carte {
         this.couleur = c;
     }
     public abstract int getValeur();
+    public abstract void appliquereffet();
     public abstract boolean peutEtreRecouvertePar (Carte c);
     public abstract boolean peutEtrePoseeSur(Chiffre c);
     public abstract boolean peutEtrePoseeSur(Plus2 c);

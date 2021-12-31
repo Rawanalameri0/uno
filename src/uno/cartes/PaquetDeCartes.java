@@ -125,7 +125,12 @@ public class PaquetDeCartes implements Iterable<Carte>{
 
     }
 
-    
 
+    public void remove(Carte carte) {
+        this.remove(carte);
+    }
 
+    public Carte getCarte(int i) {
+        return this.getCarte(i);
+    }
 }

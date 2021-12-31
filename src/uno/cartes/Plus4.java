@@ -14,6 +14,11 @@ public class Plus4 extends Carte {
         return 50;
     }
 
+    @Override
+    public void appliquereffet() {
+        uno.effet_piocher(4);
+    }
+
 
     public boolean peutEtreRecouvertePar(Carte c) {
         return c.peutEtrePoseeSur(this);

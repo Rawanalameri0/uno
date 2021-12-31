@@ -14,6 +14,11 @@ public class Chiffre extends Carte {
         return val;
     }
 
+    @Override
+    public void appliquereffet() {
+
+    }
+
     public boolean peutEtreRecouvertePar(Carte c) {
         return c.peutEtrePoseeSur(this);
     }
