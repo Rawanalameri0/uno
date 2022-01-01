@@ -7,6 +7,7 @@ public abstract class Joueur {
     protected PaquetDeCartes main;
     protected String nom;
     protected int numero;
+    protected int score;
 
     public Joueur(String nom,Uno uno,int numero){
         this.uno= uno;

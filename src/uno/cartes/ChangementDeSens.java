@@ -52,8 +52,7 @@ public class ChangementDeSens extends Carte {
 
 
     public void appliquereffet(){
-
-
+        uno.effetChangementdeSens();
     }
 
 

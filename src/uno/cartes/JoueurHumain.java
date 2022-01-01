@@ -15,12 +15,19 @@ public class JoueurHumain extends Joueur {
             if(coup.length()==1){
                 if(coup.charAt(0)=='p'){
                     this.main.ajouter(uno.pioche_c());
+                    if(uno.top_talon().peutEtreRecouvertePar(main.getSommet())){
+                        carte_chosie =main.getSommet();
+                        return carte_chosie;
+                    }
+                }
+                else{
+                    throw new Exception("CHOIX PAS COMPITIBLE");
                 }
             }
             else if(coup.length()==2){
                 char couleur_carte = coup.charAt(1);
-                if(Carte_index <= this.main.getNombreDeCartes() && Carte_index>=0){
-                    carte_chosie = this.main.getCarte(Carte_index);
+                if(Carte_index < this.main.getNombreDeCartes() && Carte_index>0){
+                    carte_chosie = this.main.getCarte(Carte_index-1);
                     if (uno.top_talon().peutEtreRecouvertePar(carte_chosie)){
                         if(carte_chosie.estSansCouleur()) {
                                 if (couleur_carte == 'B' || couleur_carte == 'b') {
@@ -34,7 +41,7 @@ public class JoueurHumain extends Joueur {
                                 }
                         }
                     }else {
-                        throw new Exception("Erreur");
+                        throw new Exception("CARTE PAS COMPITIBLE");
                     }
                 }
             }
@@ -48,12 +55,14 @@ public class JoueurHumain extends Joueur {
 
     @Override
     public void jouer(String coup) {
-        Carte carte_jouee;
         try {
+            Carte carte_jouee;
+            CarteChoisie(coup);
             carte_jouee= CarteChoisie(coup);
             uno.ajouter_talon(carte_jouee);
             this.main.remove(carte_jouee);
             carte_jouee.appliquereffet();
+
         }catch (Exception e){
             e.printStackTrace();
         }

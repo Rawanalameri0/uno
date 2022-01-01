@@ -11,15 +11,18 @@ public class DialogueLigneDeCommande {
         this.uno= uno;
         this.scan=new Scanner(System.in);
         uno.setDialogue(this);
+        System.out.println("Choisir combien de joueurs?");
         int nbPlayers = scan.nextInt();
+        if(nbPlayers<1 && nbPlayers>6){
+           nbPlayers=5;
+        }
+        System.out.println("Entrez votre nom");
         String nomPlayer = scan.next();
         uno.Initialiser(nbPlayers,nomPlayer);
 
     }
 
     public void regair(){
-        uno.top_talon();
-
 
     }
 

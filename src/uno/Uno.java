@@ -77,7 +77,11 @@ public class Uno {
     }
 
     public void effetChangementdeSens() {
-        senshorraire = true;
+        if(senshorraire)
+        {
+            senshorraire= false;
+        }
+
 
     }
 
@@ -128,5 +132,14 @@ public class Uno {
         this.senshorraire = true;
 
 
+    }
+
+    public Joueur Player_gagne() {
+        for (Joueur j : players) {
+            if (j.getmain().estVide()) {
+                return j;
+            }
+        }
+        return null;
     }
 }
