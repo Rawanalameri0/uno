@@ -26,13 +26,9 @@ public class Uno {
     }
 
     public int getCurrent_player() {
-        return Current_player;
+        return this.Current_player;
     }
 
-    public void add_carte_talon(Carte tc) {
-        this.talon.ajouter(tc);
-
-    }
 
     public Carte pioche_c() {
         if (pioche.piocher() == null) {
@@ -56,6 +52,10 @@ public class Uno {
         }
     }
 
+    public Joueur getPlayer(int i) {
+        return this.players.get(i);
+
+    }
 
     public void effet_piocher(int nb) {
         if (nb < 0) {
@@ -77,28 +77,25 @@ public class Uno {
     }
 
     public void effetChangementdeSens() {
-        if(senshorraire)
-        {
-            senshorraire= false;
+        if (senshorraire) {
+            senshorraire = false;
         }
 
 
     }
 
     public void DistribuerCartes() {
-        this.pioche = FabriqueCartes.getInstance().Paquet_UNO();
+        this.pioche = FabriqueCartes.getInstance().Paquet_UNO(this);
         pioche.melanger();
         this.talon = FabriqueCartes.getInstance().getPaquetVide();
         this.talon.ajouter(pioche_c());
 
-        for (int nb_c = 0; nb_c <= 7; nb_c++) {
-            for (int i = joueurquidistrbue; i < players.size(); i++) {
+        for (int nb_c = 1; nb_c <= 7; nb_c++) {
+            for (int i = QuiDistribue(); i < players.size(); i++) {
                 Carte c = this.pioche.piocher();
                 this.players.get(i).recoitCarte(c);
 
             }
-
-
         }
         this.talon.ajouter(pioche.piocher());
     }
@@ -109,15 +106,15 @@ public class Uno {
     }
 
     public int ChoisirquiJoue() {
-        return QuiDistribue() + 1;
+        return QuiDistribue();
 
     }
-
 
     public void ajouter_talon(Carte c) {
 
         this.talon.ajouter(c);
     }
+
 
     public void setDialogue(DialogueLigneDeCommande DLDC) {
         this.dialogue = DLDC;
@@ -142,4 +139,37 @@ public class Uno {
         }
         return null;
     }
+
+    public int getnbPlayer() {
+        return this.players.size();
+    }
+
+    public boolean Senshorraire() {
+        return this.senshorraire;
+    }
+
+    public boolean isPlayerHumain(Joueur player) {
+        for (Joueur i : players) {
+            if (players.indexOf(i) == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public void jouer(String coup) {
+        if(senshorraire==true){
+
+            this.players.get(getCurrent_player()+1).jouer(coup);
+        }
+        else{
+            this.players.get(getnbPlayer()-1).jouer(coup);
+        }
+
+
+
+    }
+
+
 }

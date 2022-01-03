@@ -55,6 +55,10 @@ public class Jocker extends Carte {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return ("Jocker");
+    }
 
 
 }

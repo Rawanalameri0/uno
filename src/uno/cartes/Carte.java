@@ -40,6 +40,8 @@ public abstract class Carte {
         return c.getCouleur().equals(this.couleur);
     }
 
+    public abstract String toString();
+
 
 
 }

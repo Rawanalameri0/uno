@@ -55,7 +55,10 @@ public class Plus2 extends Carte {
         return this.estDeCouleurCompatibleAvec(c);
     }
 
-
+    @Override
+    public String toString() {
+        return ("Plus2_" +getCouleur());
+    }
 
 
 }

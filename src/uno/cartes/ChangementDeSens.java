@@ -49,13 +49,15 @@ public class ChangementDeSens extends Carte {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return ("CDS_" + getCouleur());
+    }
 
 
     public void appliquereffet(){
         uno.effetChangementdeSens();
     }
-
-
 
 
 

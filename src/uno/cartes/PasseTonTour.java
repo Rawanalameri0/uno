@@ -54,7 +54,10 @@ public class PasseTonTour extends Carte {
         return this.estDeCouleurCompatibleAvec(c);
     }
 
-
+    @Override
+    public String toString() {
+        return ("Passtontour_" + getCouleur());
+    }
 
 
 }

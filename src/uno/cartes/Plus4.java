@@ -54,7 +54,10 @@ public class Plus4 extends Carte {
         return true;
     }
 
-
+    @Override
+    public String toString() {
+        return ("Plus4");
+    }
 
 
 }

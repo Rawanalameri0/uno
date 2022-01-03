@@ -26,9 +26,8 @@ public class FabriqueCartes{
 
 
 
-    public PaquetDeCartes Paquet_UNO()
+    public PaquetDeCartes Paquet_UNO(Uno uno)
     {
-        Uno uno = new Uno();
         PaquetDeCartes pdc = new PaquetDeCartes();
         Carte chiffre1 = new Chiffre(uno, Couleur.BLEU,0);
         Carte chiffre2 = new Chiffre(uno,Couleur.JAUNE,0);
@@ -75,7 +74,5 @@ public class FabriqueCartes{
         PaquetDeCartes pdc = new PaquetDeCartes();
         return pdc;
     }
-
-
 
 }

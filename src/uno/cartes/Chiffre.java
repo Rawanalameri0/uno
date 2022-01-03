@@ -42,6 +42,10 @@ public class Chiffre extends Carte {
         return this.estDeCouleurCompatibleAvec(c);
     }
 
+    @Override
+    public String toString() {
+        return ("Chiffre_" + getValeur()+ "_" + getCouleur());
+    }
 
 
     public boolean peutEtrePoseeSur(PasseTonTour c) {
