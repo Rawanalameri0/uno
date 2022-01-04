@@ -56,7 +56,7 @@ public class Bot extends Joueur {
     }
 
 
-    private void setscore(int valeur) {
+    public void setscore(int valeur) {
         this.score += valeur;
     }
 
@@ -65,5 +65,7 @@ public class Bot extends Joueur {
         return false;
     }
 
-
+    public String getnom() {
+        return (nom+numero);
+    }
 }

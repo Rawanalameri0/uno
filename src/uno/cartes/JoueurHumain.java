@@ -76,7 +76,12 @@ public class JoueurHumain extends Joueur {
         }
     }
 
-    private void setscore(int val) {
+    public void setscore(int val) {
         this.score+=val;
+    }
+
+    @Override
+    public String getnom() {
+        return (nom+numero);
     }
 }

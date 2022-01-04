@@ -12,15 +12,15 @@ public abstract class Joueur {
 
     /**
      * Constructeur du Joueur
-     * @param name le nom du joueur (humain pas bot)
+     * @param nom le nom du joueur (humain pas bot)
      * @param uno
      * @param numero le numero du joueur
      */
 
-    public Joueur(String name,Uno uno,int numero){
+    public Joueur(String nom,Uno uno,int numero){
         this.uno= uno;
         this.numero= numero;
-        this.name=name;
+        this.nom=nom;
         this.main=new PaquetDeCartes();
         this.score = 0;
     }
@@ -61,7 +61,6 @@ public abstract class Joueur {
     {
         return score;
     }
-
     public void increment_score(int nb)
     {
         this.score +=nb;
@@ -69,6 +68,7 @@ public abstract class Joueur {
     public  String getnom(){
         return nom;
     }
+
 
 
 
